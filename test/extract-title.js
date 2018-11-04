@@ -5,7 +5,7 @@ const extractTitle = require("../lib/extract-title");
 
 describe("extract title", () => {
   it("returns the first title", async () => {
-    const title = await extractTitle("test/fixtures/simple.md")
+    const title = await extractTitle("test/fixtures/simple.md");
 
     expect(title).to.equal("Hello World!");
   });

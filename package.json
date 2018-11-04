@@ -13,5 +13,8 @@
     "chokidar-cli": "^1.2.1",
     "code": "^5.2.3",
     "lab": "^17.2.1"
+  },
+  "dependencies": {
+    "matched": "^3.0.1"
   }
 }
