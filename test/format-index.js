@@ -1,7 +1,7 @@
 const { expect } = require("code");
 const { it, describe } = (exports.lab = require("lab").script());
 
-const { formatIndex } = require("../lib/files");
+const { formatIndex } = require("../lib/writing");
 
 describe("format index", () => {
   it("returns a formatted string of the index", async () => {

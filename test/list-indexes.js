@@ -1,7 +1,7 @@
 const { expect } = require("code");
 const { it, describe } = (exports.lab = require("lab").script());
 
-const { listIndexes } = require("../lib/files");
+const { listIndexes } = require("../lib/reading");
 
 describe("list indexes", () => {
   it("returns a list of index files", () => {
