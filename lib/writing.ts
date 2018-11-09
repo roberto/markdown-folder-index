@@ -1,12 +1,17 @@
 const fs = require("fs");
 const { tap, pipe, join, map } = require("ramda");
 
-const formatIndex = pipe(
-  map(({ title, file }) => `* [${title}](${file})`),
+type FileData = {
+  file: string,
+  title: string
+}
+
+export const formatIndex = pipe(
+  map(({ title, file }: FileData) => `* [${title}](${file})`),
   join("\n")
 );
 
-const writeIndex = (file, indexContent) => {
+export const writeIndex = (file: string, indexContent: string) => {
   const currentContent = fs.readFileSync(file, "utf-8");
 
   const newContent = currentContent.replace(
@@ -17,10 +22,6 @@ const writeIndex = (file, indexContent) => {
   fs.writeFileSync(file, newContent);
 };
 
-const indexTemplate = content =>
+const indexTemplate = (content: string) =>
   `<!-- folder-index-start -->\n${content}\n<!-- folder-index-end -->`;
 
-module.exports = {
-  formatIndex,
-  writeIndex
-};

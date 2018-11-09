@@ -1,10 +1,14 @@
-const { expect } = require("code");
-const { it, describe } = (exports.lab = require("lab").script());
+import * as Lab from "lab";
+import { expect } from "code";
 
-const { formatIndex } = require("../lib/writing");
+const lab = Lab.script();
+const { it, describe } = lab;
+export { lab };
+
+import { formatIndex } from "../lib/writing";
 
 describe("format index", () => {
-  it("returns a formatted string of the index", async () => {
+  it("returns a formatted string of the index", () => {
     const content = formatIndex([
       { title: "Example 1", file: "example/file1.md" },
       { title: "Example 2", file: "example/file2.md" }

@@ -1,7 +1,11 @@
-const { expect } = require("code");
-const { it, describe } = (exports.lab = require("lab").script());
+import * as Lab from "lab";
+import { expect } from "code";
 
-const { listIndexes } = require("../lib/reading");
+const lab = Lab.script();
+const { it, describe } = lab;
+export { lab };
+
+import { listIndexes } from "../lib/reading";
 
 describe("list indexes", () => {
   it("returns a list of index files", () => {

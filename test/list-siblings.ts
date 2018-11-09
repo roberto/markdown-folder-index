@@ -1,7 +1,11 @@
-const { expect } = require("code");
-const { it, describe } = (exports.lab = require("lab").script());
+import * as Lab from "lab";
+import { expect } from "code";
 
-const { listSiblings } = require("../lib/reading");
+const lab = Lab.script();
+const { it, describe } = lab;
+export { lab };
+
+import { listSiblings } from "../lib/reading";
 
 describe("list siblings", () => {
   it("returns a list of sibling files", () => {

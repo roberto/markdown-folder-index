@@ -1,13 +1,12 @@
-const fs = require("fs");
-const { expect } = require("code");
-const {
-  it,
-  describe,
-  beforeEach,
-  afterEach
-} = (exports.lab = require("lab").script());
+import * as Lab from "lab";
+import { expect } from "code";
+import * as fs from "fs";
 
-const { writeIndex } = require("../lib/writing");
+const lab = Lab.script();
+const { it, describe, beforeEach, afterEach } = lab;
+export { lab };
+
+import { writeIndex } from "../lib/writing";
 
 const TEST_FILE = "test/fixtures/writing.md";
 

@@ -1,7 +1,11 @@
-const { expect } = require("code");
-const { it, describe } = (exports.lab = require("lab").script());
+import * as Lab from "lab";
+import { expect } from "code";
 
-const { extractTitle } = require("../lib/reading");
+const lab = Lab.script();
+const { it, describe } = lab;
+export { lab };
+
+import { extractTitle } from "../lib/reading";
 
 describe("extract title", () => {
   it("returns the first title", () => {
