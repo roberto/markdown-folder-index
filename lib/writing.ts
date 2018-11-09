@@ -1,9 +1,9 @@
-const fs = require("fs");
-const { tap, pipe, join, map } = require("ramda");
+import fs from "fs";
+import { join, map, pipe, tap } from "ramda";
 
-type FileData = {
-  file: string,
-  title: string
+interface FileData {
+  file: string;
+  title: string;
 }
 
 export const formatIndex = pipe(
@@ -24,4 +24,3 @@ export const writeIndex = (file: string, indexContent: string) => {
 
 const indexTemplate = (content: string) =>
   `<!-- folder-index-start -->\n${content}\n<!-- folder-index-end -->`;
-

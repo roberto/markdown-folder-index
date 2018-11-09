@@ -1,5 +1,5 @@
-import * as Lab from "lab";
 import { expect } from "code";
+import * as Lab from "lab";
 
 const lab = Lab.script();
 const { it, describe } = lab;

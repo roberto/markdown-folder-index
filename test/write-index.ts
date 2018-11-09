@@ -1,6 +1,6 @@
-import * as Lab from "lab";
 import { expect } from "code";
 import * as fs from "fs";
+import * as Lab from "lab";
 
 const lab = Lab.script();
 const { it, describe, beforeEach, afterEach } = lab;
