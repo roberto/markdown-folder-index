@@ -6,6 +6,7 @@ import { filter, join, map, pipe } from "ramda";
 const REGEX_TOKEN = /^\<!-- folder-index(-start)? --\>$/m;
 
 export const listIndexes = (folder: string): string[] => {
+  console.log('listIndexes', path.join(folder, "**/README.md"))
   const files = matched.sync(path.join(folder, "**/README.md"), {
     nocase: true
   });
@@ -18,6 +19,8 @@ export const listIndexes = (folder: string): string[] => {
 
 export const listSiblings = (file: string) => {
   const folder = path.dirname(file);
+
+  console.log('listSiblings', path.join(folder, "*.md"))
 
   return matched.sync(path.join(folder, "*.md"), { ignore: file });
 };

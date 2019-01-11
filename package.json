@@ -8,7 +8,7 @@
     "build": "tsc",
     "lint": "tslint **/*.ts",
     "test": "lab --sourcemaps --transform node_modules/lab-transform-typescript",
-    "test:watch": "chokidar '{lib,test}/**/*.js' -c 'npm test'"
+    "test:watch": "chokidar '{lib,test}/**/*.ts' -c 'npm test'"
   },
   "author": "Roberto Soares",
   "license": "MIT",
@@ -21,6 +21,7 @@
     "lab": "^17.2.1",
     "lab-transform-typescript": "^3.0.1",
     "prettier": "^1.15.1",
+    "sinon": "^7.1.1",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.1.6"
